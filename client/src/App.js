@@ -1,3 +1,4 @@
+/* eslint-disable import/no-webpack-loader-syntax */
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import StarIcon from '@mui/icons-material/Star';
 import axios from "axios";
@@ -7,7 +8,8 @@ import moment from 'moment';
 import './App.scss';
 import Login from './components/Login';
 import Register from './components/Register';
-
+import mapboxgl from 'mapbox-gl';
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 function App() {
   const myStorage = window.localStorage;
@@ -94,6 +96,7 @@ function App() {
     myStorage.removeItem("user");
     setCurrentUser(null);
   }
+  
 
   return (
     <>
