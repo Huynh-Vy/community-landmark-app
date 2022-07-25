@@ -8,9 +8,10 @@ const app = express();
 
 dotenv.config();
 
+app.use(cors({origin: 'http://localhost:3000'}));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+
 
 // Connect to DB
 mongoose
@@ -25,12 +26,6 @@ const userRoute = require("./routes/UserRoute");
 // Routes Middlewares
 app.use("/api/notes", noteRoute);
 app.use("/api/users", userRoute);
-
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
 
 // Server static assets if in production
 if(process.env.NODE_ENV === 'production') {
