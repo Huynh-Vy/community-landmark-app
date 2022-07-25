@@ -26,7 +26,7 @@ function Register(props) {
         }
 
         try {
-            await axios.post("http://localhost:8080/api/users/register", newUser);
+            await axios.post("http://127.0.0.1:8080/api/users/register", newUser);
             setError(false);
             setSuccess(true);
         } catch (error) {

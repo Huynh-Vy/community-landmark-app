@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     const getNotes = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/notes");
+        const res = await axios.get("http://127.0.0.1:8080/api/notes");
         setNotes(res.data);
         
       } catch (error) {
@@ -84,7 +84,7 @@ function App() {
     }
 
     try {
-      const res = await axios.post("http://localhost:8080/api/notes", newNote);
+      const res = await axios.post("http://127.0.0.1:8080/api/notes", newNote);
       setNotes([...notes, res.data]);
       setNewPlace(null);
     } catch (error) {

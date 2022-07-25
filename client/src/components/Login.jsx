@@ -23,7 +23,7 @@ function Login(props) {
         }
 
         try {
-            const res = await axios.post("http://localhost:8080/api/users/login", user);
+            const res = await axios.post("http://127.0.0.1/api/users/login", user);
             myStorage.setItem("user", res.data.user);
             setCurrentUser(res.data.user);
             setShowLogin(false);
