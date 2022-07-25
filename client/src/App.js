@@ -3,7 +3,7 @@ import StarIcon from '@mui/icons-material/Star';
 import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import Map, { Marker, Popup } from 'react-map-gl';
-import moment from 'moment';
+import { format } from 'timeago.js';
 
 import './App.scss';
 import Login from './components/Login';
@@ -163,7 +163,7 @@ function App() {
                     </div>
                     <label>Information</label>
                     <span className="username">Created by <b>{note.username}</b></span>
-                    <span className="date">{moment(note.createAt).fromNow()}</span>
+                    <span className="date">{format(note.createAt)}</span>
                   </div>
                 </Popup>
                 )
