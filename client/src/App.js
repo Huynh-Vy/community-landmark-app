@@ -114,7 +114,7 @@ function App() {
           <Map
             mapboxAccessToken={process.env.REACT_APP_MAPBOX}
             initialViewState={viewport}
-            mapStyle="mapbox://styles/mapbox/streets-v11"
+            mapStyle="mapbox://styles/mapbox/streets-v9"
             style={{ width: "100vw", height: "100vh"}}
             onDblClick={handleAddMarker}
           > 
