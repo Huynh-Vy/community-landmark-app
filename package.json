@@ -1,8 +1,5 @@
 {
   "name": "app",
-  "engines": {
-    "node": "16.15.1"
-  },
   "version": "1.0.0",
   "description": "My Community Landmark",
   "main": "index.js",
