@@ -1,0 +1,102 @@
+h1 {
+    background-color: lightblue;
+    text-align: center;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+label {
+    width: max-content;
+    color: tomato;
+    font-size: 14px;
+    border-bottom: 0.5px solid tomato;
+    margin: 3px 0;
+}
+
+.desc, .place, .username {
+    font-size: 14px;
+}
+
+.date {
+    font-size: 12px;
+}
+
+.stars {
+    color: gold;
+}
+
+form {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+
+    ::placeholder {
+        font-size: 12px;
+        color: gray;
+    }
+}
+
+textarea {
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    ::placeholder {
+        font-size: 12px;
+        color: gray;
+    }
+}
+
+.submit-btn {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.logout {
+    background-color: tomato;
+
+}
+
+.login {
+    background-color: teal;
+    margin-right: 10px;
+}
+
+.register {
+    background-color: blueviolet;
+    
+}
+
+.buttons, .logout {
+    position: absolute;
+    z-index: 16;
+    top: 10px;
+    right: 10px;
+}
