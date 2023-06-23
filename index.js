@@ -27,9 +27,6 @@ const userRoute = require("./routes/UserRoute");
 app.use("/api/notes", noteRoute);
 app.use("/api/users", userRoute);
 
-app.get('/', (req, res) => {
-    res.send('App is running');
-});
 
 // Server static assets if in production
 if(process.env.NODE_ENV === 'production') {
